@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-var t = require('C:/Users/Admin/brain-time/testmodule.js')
+var t = require('../testmodule.js')
 
 app.use(express.static("project-files"));
 
