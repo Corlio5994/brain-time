@@ -8,7 +8,7 @@ app.get('/', function (req, res) {
     res.send('Hello world')
 })
 
-app.listen(process.env.PORT || 80, function () {
+app.listen(process.env.PORT || 8080, function () {
     console.log('Server started...')
 });
 
