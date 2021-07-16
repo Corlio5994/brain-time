@@ -33,11 +33,12 @@ let drawGradient = function() {
     sq.style.left = String(positionX) + "px";
     sq.style.top = String(positionY) + "px";
     var colorId = Math.floor(Math.random()*cssColors.length);
-    if (id == 62){
-        console.log(colorId);
-    }
     sq.style.backgroundColor = cssColors[colorId];
     rect.appendChild(sq); 
+    sq.addEventListener("click", function(){
+        var select = document.getElementById("color-select");
+        select.style.backgroundColor = sq.style.backgroundColor;
+    });
     if (colorId != 0) {
         var cssColors1 = cssColors.slice(0,colorId);
         var cssColors2 = cssColors.slice(colorId +1, cssColors.length);
